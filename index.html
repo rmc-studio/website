@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Стажировка RMC.Studio — выход на международный рынок</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#E9E3D6;
+    --paper-2:#EFEAE0;
+    --ink:#15140F;
+    --ink-soft:#3a382f;
+    --muted:#7c7869;
+    --accent:#2230E8;
+    --accent-ink:#0e1a8a;
+    --line:rgba(21,20,15,.14);
+    --maxw:1080px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Manrope',system-ui,sans-serif;
+    font-size:18px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  .display{font-family:'Unbounded',sans-serif;line-height:1.02;letter-spacing:-.02em;font-weight:700}
+  .eyebrow{font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--accent-ink)}
+  .accent{color:var(--accent)}
+  strong{font-weight:800}
+
+  /* ---------- nav ---------- */
+  nav{position:sticky;top:0;z-index:50;background:rgba(233,227,214,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .logo{font-family:'Unbounded';font-weight:700;font-size:18px;letter-spacing:-.01em}
+  .logo span{color:var(--accent)}
+  .nav-cta{font-weight:700;font-size:15px;background:var(--ink);color:var(--paper);padding:10px 18px;border-radius:100px;text-decoration:none;transition:transform .2s,background .2s}
+  .nav-cta:hover{background:var(--accent);transform:translateY(-1px)}
+  @media(max-width:560px){.nav-cta{padding:9px 15px;font-size:14px}}
+
+  /* ---------- hero ---------- */
+  .hero{padding:78px 0 64px;position:relative}
+  .hero h1{font-size:clamp(38px,7.5vw,82px)}
+  .hero h1 .l2{display:block;color:var(--muted)}
+  .hero .sub{margin-top:30px;max-width:620px;font-size:clamp(18px,2.4vw,22px);color:var(--ink-soft)}
+  .hero .cta-row{margin-top:40px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .btn{font-family:'Manrope';font-weight:800;font-size:17px;text-decoration:none;border-radius:100px;padding:17px 30px;display:inline-flex;align-items:center;gap:10px;transition:transform .2s,box-shadow .2s,background .2s,color .2s;cursor:pointer;border:none}
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 30px -10px rgba(34,48,232,.7)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 40px -12px rgba(34,48,232,.8)}
+  .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:var(--paper)}
+  .hero-note{margin-top:18px;font-size:15px;color:var(--muted)}
+
+  /* signature money jump */
+  .jump{margin-top:54px;display:flex;align-items:center;gap:clamp(16px,4vw,46px);flex-wrap:wrap}
+  .jump .from{position:relative;font-family:'Unbounded';font-weight:600;font-size:clamp(26px,5vw,46px);color:var(--muted)}
+  .jump .from s{text-decoration:none;position:relative}
+  .jump .from s::after{content:"";position:absolute;left:-4px;right:-4px;top:52%;height:3px;background:var(--muted);transform:rotate(-7deg)}
+  .jump .arrow{font-size:clamp(24px,4vw,40px);color:var(--accent)}
+  .jump .to{font-family:'Unbounded';font-weight:800;font-size:clamp(40px,9vw,92px);color:var(--ink);line-height:1}
+  .jump .x10{font-family:'Unbounded';font-weight:700;font-size:clamp(15px,2.5vw,20px);color:#fff;background:var(--accent);padding:7px 14px;border-radius:100px;align-self:flex-start}
+  .jump-cap{margin-top:14px;font-size:15px;color:var(--muted);max-width:540px}
+
+  /* ---------- section base ---------- */
+  section{padding:84px 0}
+  .sec-head{max-width:740px;margin-bottom:50px}
+  .sec-head .eyebrow{margin-bottom:16px;display:block}
+  .sec-head h2{font-size:clamp(28px,4.6vw,50px);line-height:1.06}
+  .sec-head p{margin-top:20px;font-size:19px;color:var(--ink-soft);max-width:620px}
+
+  /* mirrors */
+  .mirrors{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .mirror{background:var(--paper-2);border:1px solid var(--line);border-radius:18px;padding:30px 26px}
+  .mirror .q{font-family:'Unbounded';font-weight:600;font-size:20px;line-height:1.18;margin-bottom:14px}
+  .mirror p{font-size:16px;color:var(--ink-soft)}
+  .converge{margin-top:34px;text-align:center;font-size:clamp(19px,2.6vw,24px);font-weight:700;line-height:1.4}
+  @media(max-width:780px){.mirrors{grid-template-columns:1fr}}
+
+  /* dark section */
+  .dark{background:var(--ink);color:var(--paper)}
+  .dark .eyebrow{color:#9aa6ff}
+  .dark .sec-head p{color:#cfcbbe}
+  .dark .muted{color:#a5a193}
+
+  /* two inputs */
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:8px}
+  .input-card{border:1px solid rgba(233,227,214,.18);border-radius:20px;padding:34px 30px;background:rgba(255,255,255,.03)}
+  .input-card .n{font-family:'Unbounded';font-weight:700;font-size:14px;color:#9aa6ff;letter-spacing:.1em}
+  .input-card h3{font-family:'Unbounded';font-weight:600;font-size:24px;margin:14px 0 14px;line-height:1.12}
+  .input-card p{color:#cfcbbe;font-size:16.5px}
+  @media(max-width:780px){.duo{grid-template-columns:1fr}}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
+  .step{position:relative;padding-top:26px}
+  .step::before{content:counter(s,decimal-leading-zero);counter-increment:s;font-family:'Unbounded';font-weight:700;font-size:14px;color:var(--accent);position:absolute;top:0;left:0}
+  .step h4{font-size:17px;font-weight:800;margin-bottom:8px;line-height:1.2}
+  .step p{font-size:15px;color:var(--ink-soft)}
+  .step{border-top:2px solid var(--ink)}
+  @media(max-width:780px){.steps{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.steps{grid-template-columns:1fr}}
+
+  /* proof */
+  .proof-lead{font-family:'Unbounded';font-weight:600;font-size:clamp(24px,4vw,38px);line-height:1.18;max-width:840px}
+  .proof-lead .accent{color:#9aa6ff}
+  .proof-grid{margin-top:50px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .pf{border:1px solid rgba(233,227,214,.18);border-radius:18px;padding:28px}
+  .pf .big{font-family:'Unbounded';font-weight:800;font-size:34px;line-height:1;color:#fff}
+  .pf .lbl{margin-top:12px;font-size:15px;color:#a5a193}
+  .proof-foot{margin-top:36px;font-size:17px;color:#cfcbbe;max-width:720px}
+  @media(max-width:780px){.proof-grid{grid-template-columns:1fr}}
+
+  /* tariffs */
+  .tariffs{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
+  .tariff{border:1px solid var(--line);border-radius:22px;padding:38px 34px;background:var(--paper-2);display:flex;flex-direction:column}
+  .tariff.best{border:2px solid var(--accent);background:#fff;position:relative}
+  .tariff.best::before{content:"Рекомендую";position:absolute;top:-13px;left:34px;background:var(--accent);color:#fff;font-size:13px;font-weight:800;padding:6px 14px;border-radius:100px;letter-spacing:.02em}
+  .tariff .tname{font-family:'Unbounded';font-weight:600;font-size:22px}
+  .tariff .price{font-family:'Unbounded';font-weight:800;font-size:46px;margin:18px 0 6px;letter-spacing:-.02em}
+  .tariff .for{font-size:16px;color:var(--muted);min-height:48px}
+  .tariff ul{list-style:none;margin:24px 0 28px;display:flex;flex-direction:column;gap:12px}
+  .tariff li{font-size:16.5px;padding-left:28px;position:relative}
+  .tariff li::before{content:"→";position:absolute;left:0;color:var(--accent);font-weight:800}
+  .tariff .btn{margin-top:auto;justify-content:center;width:100%}
+  .tariff.best .btn{background:var(--accent);color:#fff}
+  .tariff .btn-ghost{border-color:var(--ink)}
+  .anchor-line{text-align:center;margin-top:30px;font-size:17px;color:var(--ink-soft)}
+  .anchor-line s{color:var(--muted)}
+  @media(max-width:780px){.tariffs{grid-template-columns:1fr}}
+
+  /* scarcity / objections */
+  .honest{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px}
+  .hcard{padding:28px;border-left:2px solid var(--accent);background:var(--paper-2);border-radius:0 14px 14px 0}
+  .hcard h4{font-size:18px;font-weight:800;margin-bottom:10px}
+  .hcard p{font-size:16px;color:var(--ink-soft)}
+  @media(max-width:780px){.honest{grid-template-columns:1fr}}
+
+  /* final cta */
+  .final{text-align:center}
+  .final h2{font-size:clamp(30px,5.4vw,60px);line-height:1.05;max-width:820px;margin:0 auto}
+  .final p{margin:24px auto 0;max-width:540px;font-size:19px;color:var(--ink-soft)}
+  .final .btn{margin-top:36px}
+
+  /* call / second door */
+  .call{background:var(--paper-2);border:1px solid var(--line);border-radius:24px;padding:clamp(34px,5vw,56px);display:flex;gap:40px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+  .call .ctxt{max-width:560px}
+  .call .eyebrow{display:block;margin-bottom:14px}
+  .call h3{font-family:'Unbounded';font-weight:600;font-size:clamp(24px,3.4vw,34px);line-height:1.12;margin-bottom:16px}
+  .call p{font-size:17px;color:var(--ink-soft)}
+  .call .btn{flex-shrink:0}
+
+  footer{padding:48px 0;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+
+  /* sticky mobile bar */
+  .stick{position:fixed;bottom:0;left:0;right:0;z-index:60;background:var(--ink);padding:12px 16px;display:none;align-items:center;justify-content:space-between;gap:12px;transform:translateY(100%);transition:transform .3s}
+  .stick.show{transform:translateY(0)}
+  .stick .sp{color:var(--paper);font-weight:800;font-size:15px}
+  .stick .sp small{display:block;color:#a5a193;font-weight:500;font-size:12px}
+  .stick a{background:var(--accent);color:#fff;font-weight:800;padding:13px 22px;border-radius:100px;text-decoration:none;font-size:15px}
+  @media(max-width:680px){.stick{display:flex}}
+
+  /* gallery */
+  .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .case{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--paper-2);text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+  .case:hover{transform:translateY(-4px);box-shadow:0 22px 50px -24px rgba(21,20,15,.5)}
+  .case .thumb{aspect-ratio:16/10;background:linear-gradient(135deg,#d9d2c2,#c4bdac 60%,#b7c0f0);position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .case .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .case .ph{font-family:'Unbounded';font-weight:600;font-size:14px;color:#6b6757;letter-spacing:.04em;padding:20px;text-align:center}
+  .case .meta{padding:22px 24px}
+  .case .tag{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+  .case .cname{font-family:'Unbounded';font-weight:600;font-size:20px;margin:8px 0 6px}
+  .case .cby{font-size:15px;color:var(--muted)}
+  @media(max-width:680px){.gallery{grid-template-columns:1fr}}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:44px;align-items:center}
+  .about-photo{aspect-ratio:4/5;border-radius:22px;background:linear-gradient(150deg,#c9c2b2,#b7c0f0);display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .about-photo img{width:100%;height:100%;object-fit:cover}
+  .about-photo .ph{font-family:'Unbounded';font-size:14px;color:#6b6757;padding:24px;text-align:center}
+  .about-body h2{font-size:clamp(28px,4.4vw,46px);line-height:1.06;margin-bottom:22px}
+  .about-body p{font-size:18px;color:var(--ink-soft);margin-bottom:16px}
+  .about-stats{display:flex;gap:34px;margin-top:28px;flex-wrap:wrap}
+  .about-stats .st .n{font-family:'Unbounded';font-weight:800;font-size:34px;color:var(--accent)}
+  .about-stats .st .l{font-size:14px;color:var(--muted);margin-top:2px}
+  .about-stats .st .l em{font-style:normal;color:var(--accent);font-size:12px;display:block}
+  @media(max-width:760px){.about-grid{grid-template-columns:1fr;gap:28px}.about-photo{max-width:340px}}
+
+  /* faq */
+  .faq{max-width:820px;margin:0 auto}
+  .qa{border-bottom:1px solid var(--line)}
+  .qa button{width:100%;background:none;border:none;text-align:left;padding:26px 44px 26px 0;font-family:'Manrope';font-weight:700;font-size:clamp(17px,2.4vw,21px);color:var(--ink);cursor:pointer;position:relative;line-height:1.3}
+  .qa button::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-family:'Unbounded';font-weight:600;font-size:26px;color:var(--accent);transition:transform .3s}
+  .qa.open button::after{transform:translateY(-50%) rotate(45deg)}
+  .qa .ans{max-height:0;overflow:hidden;transition:max-height .35s ease}
+  .qa .ans p{padding:0 44px 26px 0;font-size:17px;color:var(--ink-soft)}
+  .qa.open .ans{max-height:340px}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">RMC<span>.</span>Studio</div>
+    <a href="#tariffs" class="nav-cta">Занять место</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow reveal">Стажировка-отбор в дизайн-студию</span>
+    <h1 class="display reveal" style="margin-top:22px">
+      Ты не плохой дизайнер.
+      <span class="l2">Ты просто не на том рынке.</span>
+    </h1>
+    <p class="sub reveal">
+      За 2 месяца с моим личным разбором ты создаёшь сильный проект международного уровня —
+      и выходишь на рынок, где платят в разы больше, а клиент находит тебя сам.
+    </p>
+    <div class="cta-row reveal">
+      <a href="#tariffs" class="btn btn-primary">Посмотреть тарифы →</a>
+      <a href="#how" class="btn btn-ghost">Как это устроено</a>
+    </div>
+    <p class="hero-note reveal">Беру ограниченное число людей — разбираю каждого лично.</p>
+
+    <div class="jump reveal">
+      <div class="from"><s>15 000 ₽</s></div>
+      <div class="arrow">→</div>
+      <div class="to">$3 000</div>
+      <div class="x10">×10</div>
+    </div>
+    <p class="jump-cap reveal">Не выдумка для лендинга. Это мой реальный скачок: сайты на Tilda по ~$300 → первый зарубежный проект на $3000.</p>
+  </div>
+</header>
+
+<!-- PAIN / 3 MIRRORS -->
+<section id="pain">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Узнаёшь себя?</span>
+      <h2 class="display">Боль у каждого своя. Причина — одна.</h2>
+    </div>
+    <div class="mirrors">
+      <div class="mirror reveal">
+        <div class="q">«Упахиваюсь за 15к, а правкам нет конца»</div>
+        <p>Заказчик выжимает из тебя десятую правку и говорит «это же просто конструктор». Денег те же, сил всё меньше.</p>
+      </div>
+      <div class="mirror reveal">
+        <div class="q">«Уехал — а клиенты всё ещё рублёвые»</div>
+        <p>Живёшь вне рублёвой экономики, хочешь работать в валюте. Но валютных клиентов взять негде: Upwork закрыт.</p>
+      </div>
+      <div class="mirror reveal">
+        <div class="q">«Устал искать и впаривать себя»</div>
+        <p>Холодные рассылки, биржи с демпингом, вечная охота за следующим заказом. Хочешь, чтобы клиенты писали сами.</p>
+      </div>
+    </div>
+    <p class="converge reveal">Дело не в тебе. Дело в рынке, на котором ты сейчас стоишь.<br>А с него — <span class="accent">можно сойти.</span></p>
+  </div>
+</section>
+
+<!-- WHAT IT IS: two inputs -->
+<section id="what" class="dark">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Что это на самом деле</span>
+      <h2 class="display">Не ещё один курс. Два входа сразу.</h2>
+      <p>Стажировка в RMC.Studio — это твой вход и на международный рынок, и в мою команду. Два источника клиентов вместо одного.</p>
+    </div>
+    <div class="duo">
+      <div class="input-card reveal">
+        <div class="n">01 — РЫНОК</div>
+        <h3>Международный рынок через Readymag</h3>
+        <p>Ты создаёшь сильный проект, попадаешь в Readymag Examples — витрину, куда зарубежные заказчики приходят сами искать дизайнеров. Тебя начинают находить и платить в разы больше. Это пассивный канал: работает на тебя, пока ты спишь.</p>
+      </div>
+      <div class="input-card reveal">
+        <div class="n">02 — СТУДИЯ</div>
+        <h3>Доступ к заказам моей студии</h3>
+        <p>Лучших я забираю к себе и делюсь своими заказами. Ты остаёшься свободным фрилансером — без привязки к локации и оформлению, — но получаешь второй поток клиентов и меня как наставника, к которому можно прийти с любым проектом.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Как устроено</span>
+      <h2 class="display">Два месяца. Один сильный проект. Личный разбор.</h2>
+      <p>Это отбор, а не лекции. Доступ ко всем урокам сразу + персональный список под твои дыры. Дальше — твоя работа, мой глаз на ключевых точках.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <h4>Диагностика</h4>
+        <p>Смотрю твой уровень и пробелы, собираю приоритетный маршрут под тебя.</p>
+      </div>
+      <div class="step reveal">
+        <h4>Проект + правки</h4>
+        <p>Делаешь курсовой проект, я даю правки на прокачку — до уровня Examples.</p>
+      </div>
+      <div class="step reveal">
+        <h4>Финальный разбор</h4>
+        <p>Последние правки и ответы перед отправкой. Показываю механизм, по которому тебя находят.</p>
+      </div>
+      <div class="step reveal">
+        <h4>Выход</h4>
+        <p>Готовый кейс на международном уровне. Лучших — приглашаю в студию.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section id="proof" class="dark">
+  <div class="wrap">
+    <p class="proof-lead reveal">Я не рассказываю теорию из курса. Я <span class="accent">прямо сейчас</span> делаю это на себе — открыто, на глазах у своей аудитории.</p>
+    <div class="proof-grid">
+      <div class="pf reveal">
+        <div class="big">Examples</div>
+        <div class="lbl">Мой первый сайт «Грибочки» попал в Readymag Examples и несколько лет сам приводил клиентов.</div>
+      </div>
+      <div class="pf reveal">
+        <div class="big">$3 000</div>
+        <div class="lbl">Проект для брендингового агентства Designsake (Сан-Франциско) — пришёл через этот же механизм. ×10 к моим $300 на Tilda.</div>
+      </div>
+      <div class="pf reveal">
+        <div class="big">3-й год</div>
+        <div class="lbl">Студия выросла из метода: Венди и Виктория прошли этот путь и теперь забирают заказы со мной.</div>
+      </div>
+    </div>
+    <p class="proof-foot reveal">И это не единственный встроенный инструмент Readymag, который приводит клиентов. Есть ещё один — менее очевидный. О нём рассказываю уже внутри.</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="cases">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Кейсы</span>
+      <h2 class="display">Уровень, к которому доведём твой проект.</h2>
+      <p>Мои работы в Readymag Examples и проекты дизайнеров, которые прошли этот путь и теперь работают со мной в студии.</p>
+    </div>
+    <div class="gallery">
+      <a href="#" class="case reveal">
+        <div class="thumb"><span class="ph">[ скриншот сайта «Грибочки» ]</span></div>
+        <div class="meta">
+          <div class="tag">Readymag Examples</div>
+          <div class="cname">Грибочки</div>
+          <div class="cby">Мой первый сайт на Readymag. Попал в Examples и несколько лет сам приводил клиентов — без рекламы.</div>
+        </div>
+      </a>
+      <a href="#" class="case reveal">
+        <div class="thumb"><span class="ph">[ скриншот проекта Designsake ]</span></div>
+        <div class="meta">
+          <div class="tag">Международный клиент · $3000</div>
+          <div class="cname">Designsake</div>
+          <div class="cby">Брендинговое агентство из Сан-Франциско. Пришёл через Readymag — ×10 к моему чеку на Tilda.</div>
+        </div>
+      </a>
+      <a href="#" class="case reveal">
+        <div class="thumb"><span class="ph">[ скриншот работы Венди + ссылка ]</span></div>
+        <div class="meta">
+          <div class="tag">Студийный кейс · Венди</div>
+          <div class="cname">Промо-сайт бренда одежды</div>
+          <div class="cby">Пример студийной работы: чистая типографика, сильная анимация. Венди ведёт клиентов третий год.</div>
+        </div>
+      </a>
+      <a href="#" class="case reveal">
+        <div class="thumb"><span class="ph">[ скриншот работы Виктории + ссылка ]</span></div>
+        <div class="meta">
+          <div class="tag">Студийный кейс · Виктория</div>
+          <div class="cname">Лендинг digital-продукта</div>
+          <div class="cby">Пример студийной работы: смелая сетка, акцент на конверсию. Виктория прошла тот же путь.</div>
+        </div>
+      </a>
+    </div>
+    <p class="jump-cap reveal" style="margin-top:24px">Заглушки [ … ] замени на реальные скриншоты и ссылки. Beit Prod пока не добавляем — ждём попадания в Examples.</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-photo reveal"><span class="ph">[ твоё фото ]</span></div>
+      <div class="about-body">
+        <span class="eyebrow reveal" style="display:block;margin-bottom:16px">Кто ведёт</span>
+        <h2 class="display reveal">Ксения — и я прошла этот путь сама.</h2>
+        <p class="reveal">16+ лет в веб-дизайне. Начинала там же, где ты сейчас: сайты на Tilda, российские клиенты, ограниченный чек. Первый же проект на Readymag — «Грибочки» — попал в Readymag Examples и открыл мне международный рынок.</p>
+        <p class="reveal">Сегодня я сама уже не беру заказы на разработку — я обучаю и продвигаю студию, а заказы раздаю своим дизайнерам. Из обещания делиться заказами со студентами органически выросла команда: Венди, Виктория и другие, кто дошёл до уровня.</p>
+        <p class="reveal">Я не даю теорию из курса. Я прямо сейчас, открыто, продвигаю студию ровно тем методом, которому учу тебя. Это публичный эксперимент — и живое доказательство, что он работает.</p>
+        <div class="about-stats reveal">
+          <div class="st"><div class="n">16+</div><div class="l">лет в веб-дизайне</div></div>
+          <div class="st"><div class="n">неск.</div><div class="l">сайтов в Examples <em>(впиши число)</em></div></div>
+          <div class="st"><div class="n">×10</div><div class="l">рост чека на межрынке</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TARIFFS -->
+<section id="tariffs">
+  <div class="wrap">
+    <div class="sec-head reveal" style="max-width:640px">
+      <span class="eyebrow">Тарифы</span>
+      <h2 class="display">Выбери, с чем заходишь.</h2>
+      <p>Делятся по навыку, не по амбиции. Фидбэк лично от меня — в обоих.</p>
+    </div>
+    <div class="tariffs">
+      <div class="tariff reveal">
+        <div class="tname">RM</div>
+        <div class="price">39 000 ₽</div>
+        <div class="for">Для тех, кто уже уверенно дизайнит, и кому нужен сам инструмент-проводник на международный рынок.</div>
+        <ul>
+          <li>Создание сайтов на Readymag</li>
+          <li>Личный фидбэк на ключевых этапах</li>
+          <li>Механизм, по которому тебя находят</li>
+          <li>Помощь с приёмом оплаты из-за рубежа</li>
+        </ul>
+        <a href="#" class="btn btn-ghost">Занять место</a>
+      </div>
+      <div class="tariff best reveal">
+        <div class="tname">RM + Веб-дизайн</div>
+        <div class="price">49 000 ₽</div>
+        <div class="for">Для тех, кто хочет усилить и сам дизайн, а не только освоить инструмент.</div>
+        <ul>
+          <li>Всё из тарифа RM</li>
+          <li>2 модуля по веб-дизайну: структура и визуал</li>
+          <li>Прокачка дизайна до международного уровня</li>
+          <li>Приоритет на разборах</li>
+        </ul>
+        <a href="#" class="btn btn-primary">Занять место</a>
+      </div>
+    </div>
+    <p class="anchor-line reveal">Раньше похожее обучение стоило <s>90–120 000 ₽</s>. Вход снижен намеренно — чтобы шанс попробовать себя был у каждого талантливого, кто готов работать.</p>
+  </div>
+</section>
+
+<!-- HONEST SCARCITY -->
+<section id="honest">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Честно, без таймеров</span>
+      <h2 class="display">Почему мест мало</h2>
+    </div>
+    <div class="honest">
+      <div class="hcard reveal">
+        <h4>Никаких кураторов</h4>
+        <p>Ты работаешь напрямую со мной. Это мой личный глаз и мой опыт, без прослойки.</p>
+      </div>
+      <div class="hcard reveal">
+        <h4>Разбираю каждого лично</h4>
+        <p>Поэтому я физически беру ограниченное число людей за раз — столько, сколько успеваю провести сама.</p>
+      </div>
+      <div class="hcard reveal">
+        <h4>Это отбор</h4>
+        <p>Мне нужны проактивные, готовые работать и учиться. Тех, кого надо тащить за руку, — это не про нас.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-left:auto;margin-right:auto;text-align:center;max-width:640px">
+      <span class="eyebrow">Частые вопросы</span>
+      <h2 class="display">То, что обычно спрашивают</h2>
+    </div>
+    <div class="faq">
+      <div class="qa reveal">
+        <button>А вдруг я недостаточно хорош в дизайне?</button>
+        <div class="ans"><p>Это ловят почти все — и новички переоценивают себя, и сильные занижают. Единый ориентир один: если ты делаешь коммерческие сайты, которые принимают клиенты, — ты уже на уровне. Финально подтвердим на разборе: я посмотрю твои работы и честно скажу. А если чувствуешь пробел именно в дизайне — для этого тариф 49к с двумя модулями и мой фидбэк на каждом этапе.</p></div>
+      </div>
+      <div class="qa reveal">
+        <button>Как я, находясь в России, получу оплату из-за рубежа?</button>
+        <div class="ans"><p>Это реальный вопрос — и решаемый. Есть белые, легальные схемы: ты официально оформлен, оплата идёт через проверенный сервис-посредник, обе стороны получают нормальные документы и инвойсы. Это не «серая мутка» и не геморрой на каждый платёж. Точную рабочую схему я показываю и помогаю настроить внутри стажировки.</p></div>
+      </div>
+      <div class="qa reveal">
+        <button>А ИИ не заменит веб-дизайнеров?</button>
+        <div class="ans"><p>ИИ — это расширение, как когда-то интернет: им нужно управлять, а не бороться с ним. Без понимания дизайна и пользовательского опыта ты не отличишь рабочий результат от нерабочего — ИИ выдаёт красивую картинку, но «автолейаут сломан, адаптив разваливается». Чем больше он плодит интерфейсов, тем ценнее дизайнер с системным мышлением и — главное — с каналом к клиентам, которого ИИ не даёт.</p></div>
+      </div>
+      <div class="qa reveal">
+        <button>А если я не попаду в Readymag Examples?</button>
+        <div class="ans"><p>Попадание решает модерация Readymag — этого никто не может гарантировать, и я не буду обещать. Что в моих силах: довести твой проект до того уровня, с которым в Examples реально попадают, и заточить его под это. Плюс Examples — не единственный канал: есть и другие встроенные инструменты, и заказы студии.</p></div>
+      </div>
+      <div class="qa reveal">
+        <button>Сколько это занимает и что, если я не успею за 2 месяца?</button>
+        <div class="ans"><p>Маршрут рассчитан на ~2 месяца при твоём активном участии: доступ ко всем урокам сразу и приоритетный список под твои пробелы. Это отбор, а не курс с няньканьем: ответственность на тебе. Не успел довести проект в срок — фидбэк на финал не даётся. Формат честный: он для тех, кто готов работать.</p></div>
+      </div>
+      <div class="qa reveal">
+        <button>Чем это отличается от обычного курса по Readymag?</button>
+        <div class="ans"><p>Обычный курс продаёт тебе уроки. Здесь уроки — только инструмент. Настоящий приз — отбор в мою студию: доступ к моим заказам и ко мне как наставнику. Ты получаешь не «знания», а два канала клиентов: международный рынок через Examples и заказы студии. Такого не даёт ни один курс.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <h2 class="display reveal">С твоего рынка можно сойти.<br>Вопрос только — когда.</h2>
+    <p class="reveal">Место есть прямо сейчас. Заходи, пока я набираю этот поток.</p>
+    <a href="#tariffs" class="btn btn-primary reveal">Занять место →</a>
+  </div>
+</section>
+
+<!-- SECOND DOOR: CALL -->
+<section id="call" style="padding-top:0">
+  <div class="wrap">
+    <div class="call reveal">
+      <div class="ctxt">
+        <span class="eyebrow">Ещё думаешь?</span>
+        <h3>Давай я посмотрю твои работы — и честно скажу.</h3>
+        <p>Если не уверен, твой ли это уровень и подойдёт ли тебе стажировка — приходи на короткий разбор. Посмотрю твои проекты и прямо скажу, готов ли ты к международному рынку. Без впаривания: не готов — так и скажу.</p>
+      </div>
+      <a href="#" class="btn btn-ghost">Записаться на разбор</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo">RMC<span>.</span>Studio</div>
+    <div>Дизайн-студия и стажировка-отбор · Readymag · международный рынок</div>
+  </div>
+</footer>
+
+<!-- sticky mobile bar -->
+<div class="stick" id="stick">
+  <div class="sp">Стажировка RMC.Studio<small>от 39 000 ₽ · мест ограничено</small></div>
+  <a href="#tariffs">Занять место</a>
+</div>
+
+<script>
+  // scroll reveal
+  const io=new IntersectionObserver((es)=>{
+    es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+  },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach((el,i)=>{
+    el.style.transitionDelay=Math.min(i%4*60,180)+'ms';
+    io.observe(el);
+  });
+  // faq accordion
+  document.querySelectorAll('.qa button').forEach(b=>{
+    b.addEventListener('click',()=>{
+      const qa=b.parentElement;
+      const open=qa.classList.contains('open');
+      document.querySelectorAll('.qa').forEach(x=>x.classList.remove('open'));
+      if(!open)qa.classList.add('open');
+    });
+  });
+
+  // sticky bar after hero
+  const hero=document.querySelector('.hero');const stick=document.getElementById('stick');
+  const so=new IntersectionObserver((es)=>{
+    es.forEach(e=>{stick.classList.toggle('show',!e.isIntersecting)})
+  },{threshold:0});
+  so.observe(hero);
+</script>
+</body>
+</html>
